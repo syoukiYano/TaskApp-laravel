@@ -1,91 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ToDoメモアプリ</title>  
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Tempus Dominus CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/css/tempusdominus-bootstrap-4.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+@extends('layouts.app')
 
-  <style>
-  body {
-    background-color: #f4f7f8;
-  }
-  a:hover{
-    opacity:0.7;
-    cursor: pointer;
-    /* background:#f0f8ff; */
-    text-decoration:none;
-  }
-  /* activeクラス(選択したフォルダー)以外のbgを薄い青にする。 */
-  .bg-blue:hover:not(.active){
-    background:#f0f8ff;
-  }
-  .btn-create{
-    border:solid 1px grey;
-    background:#fff;
-  }
-  .navbar {
-    margin: 2rem 0 2.5rem 0;
-  }
-  .my-navbar {
-    align-items: center;
-    background: #333;
-    display: flex;
-    height: 3rem;
-    justify-content: space-between;
-    padding: 0 2%;
-    margin-bottom: 3rem;
-  }
-  .my-navbar-brand {
-    font-size: 18px;
-  }
-  .my-navbar-brand{
-    color: #8c8c8c;
-  }
-  .my-navbar-brand:hover{
-    color: #ffffff;
-  }
-  .table td:nth-child(2),
-  .table td:nth-child(3),
-  .table td:nth-child(4) {
-    white-space: nowrap;
-    width: 1px;
-  }
-  .table tr td{
-    height:4px;
-  }
-  .form-control[disabled],
-  .form-control[readonly] {
-    background-color: #fff;
-  }
-
-.datepicker-days {
-　font-size: 93%;
-}
-.datepicker-days th.dow:first-child,
-.datepicker-days td:first-child {
-  color: #f00;
-}
-.datepicker-days th.dow:last-child,
-.datepicker-days td:last-child {
-  color: #00f;
-}
-  </style>
-
-</head>
-<body>
-<header>
-  <nav class="my-navbar">
-    <a class="my-navbar-brand text-center" href="/">ToDoメモアプリ</a>
-  </nav>
-</header>
-<main>
+@section('content')
   <div class="container">
     <div class="row">
       <!-- フォルダー -->
@@ -94,7 +9,7 @@
           <div class="card-header clearfix">
             フォルダ
             <div class="float-right">  
-              <a class="btn btn-create" data-toggle="modal" data-target="#CreateFolder"><i class="fas fa-plus fa-lg"></i></a>
+              <a class="btn btn-create" data-toggle="modal" data-target="#CreateFolder"><i class="fas fa-plus fa-lg"></i></a>              
             </div>
           </div>     
           <div class="list-group">
@@ -319,6 +234,4 @@
       </script>
     </div>
   </div>
-</main>
-</body>
-</html>
+@endsection
